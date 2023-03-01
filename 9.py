@@ -1,7 +1,7 @@
 import re
 
 def is_float(f):
-    regex = r'^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9])?[fFIL]?$'
+    regex = r'[+-]?([0-9]*\.[0-9]+|[0-9]+\.)([eE][+-]?[0-9]+)?[fFlL]?|[+-]?[0-9]+[eE][+-]?[0-9]+[fFlL]?'
     return bool(re.match(regex, f))
 
 if __name__ == "__main__":

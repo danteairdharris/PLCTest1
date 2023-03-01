@@ -1,7 +1,7 @@
 import re
 
 def is_integer(i):
-    regex = r'[1-9][0-9]*[ul]?|0[0-7]*[ul]?|0x[0-9a-f]+(i64|Ui64)'
+    regex = r'([0-9]|[1-9][0-9]*|[0-7]+|0[xX][0-9a-fA-F]+)(i64|I64|u|U|l|L)?'
     return bool(re.match(regex, i))
 
 if __name__ == "__main__":
